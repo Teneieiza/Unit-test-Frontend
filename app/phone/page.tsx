@@ -1,3 +1,5 @@
+import Form from "../components/form"
+import { ChevronIcon } from "../icon/icon"
 import styles from "./phone.module.css"
 
 export default function PhonePage() {
@@ -10,9 +12,8 @@ export default function PhonePage() {
           </p>
           <p>ด้วยหมายเลขโทรศัพท์มือถือ</p>
         </div>
-
+        <Form/>
       </div>
-
     </div>
   )
 }
