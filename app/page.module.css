@@ -1,7 +1,33 @@
-.container {
+.page, .containner, .buttonlayout {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.page {
   width: 100%;
   height: 100%;
+}
+
+.containner {
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.buttonlayout {
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.buttonpage {
+  padding: 10px 25px;
+  background-color: var(--background-button);
+  color: var(--text-button);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.buttonpage:hover{
+  background-color: var(--background-button-hover);
 }
