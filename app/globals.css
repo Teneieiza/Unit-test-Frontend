@@ -1,24 +1,44 @@
 :root {
   --background: #fafafa;
   --foreground: #171717;
+
   --background-button: #171717;
   --background-button-hover: #333333;
   --text-button: #ffffff;
-  --background-button-phone: #f7f7f7
+
+  --background-button-phone: #ffffff;
   --icon-color: #000000;
+
+  --button-gradient-first: #dfd9d9;
+  --button-gradient-second: #ffffff;
+  --button-boxshadow:#645d5d;
+
+  --input-shadow:#b9b3b3;
+  --input-bg:#ffffff;
+  --input-text: #887f7f;
   }
 
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #202020;
-    --foreground: #ededed;
-    --background-back: #0a0a0a;
-    --background-button: #dfd7d7;
-    --background-button-hover: #e0e0e0;
-    --text-button: #000000;
-    --background-button-phone: #1f1d1d;
-    --icon-color: #ffffff;
+:root {
+  --background: #202020;
+  --foreground: #ededed;
+  --background-back: #0a0a0a;
+
+  --background-button: #dfd7d7;
+  --background-button-hover: #e0e0e0;
+  --text-button: #000000;
+
+  --background-button-phone: #1f1d1d;
+  --icon-color: #ffffff;
+
+  --button-gradient-first: #111111;
+  --button-gradient-second: #3b3737;
+  --button-boxshadow:#5a5656;
+  
+  --input-shadow:#242020;
+  --input-bg:#353131;
+  --input-text: #998b8b;
   }
 }
 
@@ -55,6 +75,7 @@ main {
 a {
   color: inherit;
   text-decoration: none;
+  box-sizing: border-box;
 }
 
 h1 {
