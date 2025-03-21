@@ -11,10 +11,10 @@
 
   --button-gradient-first: #dfd9d9;
   --button-gradient-second: #ffffff;
-  --button-boxshadow:#645d5d;
+  --button-boxshadow: #645d5d;
 
-  --input-shadow:#b9b3b3;
-  --input-bg:#ffffff;
+  --input-shadow: #b9b3b3;
+  --input-bg: #ffffff;
   --input-text: #887f7f;
 
   --background-pin-header: #f5f5f5f5;
@@ -26,40 +26,37 @@
   --text-pin: #27b922;
 
   --circle-background-pin: #d7d7e1;
-  --circle-background-pined: #FF732D;
+  --circle-background-pined: #ff732d;
 
   --forgot-pass-content: #bebec4;
-  }
-
+}
 
 @media (prefers-color-scheme: dark) {
-:root {
-  --background: #202020;
-  --foreground: #ededed;
-  --background-back: #0a0a0a;
+  :root {
+    --background: #202020;
+    --foreground: #ededed;
+    --background-back: #0a0a0a;
 
-  --background-button: #dfd7d7;
-  --background-button-hover: #e0e0e0;
-  --text-button: #000000;
+    --background-button: #dfd7d7;
+    --background-button-hover: #e0e0e0;
+    --text-button: #000000;
 
-  --background-button-phone: #1f1d1d;
-  --icon-color: #ffffff;
+    --background-button-phone: #1f1d1d;
+    --icon-color: #ffffff;
 
-  --button-gradient-first: #111111;
-  --button-gradient-second: #3b3737;
-  --button-boxshadow:#5a5656;
-  
-  --input-shadow:#242020;
-  --input-bg:#353131;
-  --input-text: #998b8b;
+    --button-gradient-first: #111111;
+    --button-gradient-second: #3b3737;
+    --button-boxshadow: #5a5656;
 
-  --background-pin-header: #202020;
-  --background-pin-footer: #3b3737;
+    --input-shadow: #242020;
+    --input-bg: #353131;
+    --input-text: #998b8b;
 
-  --image-shadow: #666060;
-  --background-pin: #2e2c2c;
+    --background-pin-header: #202020;
+    --background-pin-footer: #3b3737;
 
-  --forgot-pass-content: #bebec4;
+    --image-shadow: #666060;
+    --background-pin: #2e2c2c;
   }
 }
 
@@ -67,6 +64,13 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: 'Mitr', sans-serif;
+}
+
+button,
+input,
+placeholder {
+  font-family: 'Mitr', sans-serif;
 }
 
 html,
@@ -78,9 +82,6 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   display: flex;
   justify-content: center;
   width: 100%;
