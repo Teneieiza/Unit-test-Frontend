@@ -1,5 +1,5 @@
 :root {
-  --background: #fafafa;
+  --background: #f5f5f5;
   --foreground: #171717;
 
   --background-button: #171717;
@@ -16,6 +16,19 @@
   --input-shadow:#b9b3b3;
   --input-bg:#ffffff;
   --input-text: #887f7f;
+
+  --background-pin-header: #f5f5f5f5;
+  --background-pin-footer: #ffffff;
+
+  --image-shadow: #cfc8c8;
+
+  --background-pin: #e7e6e6;
+  --text-pin: #27b922;
+
+  --circle-background-pin: #d7d7e1;
+  --circle-background-pined: #FF732D;
+
+  --forgot-pass-content: #bebec4;
   }
 
 
@@ -39,6 +52,14 @@
   --input-shadow:#242020;
   --input-bg:#353131;
   --input-text: #998b8b;
+
+  --background-pin-header: #202020;
+  --background-pin-footer: #3b3737;
+
+  --image-shadow: #666060;
+  --background-pin: #2e2c2c;
+
+  --forgot-pass-content: #bebec4;
   }
 }
 
