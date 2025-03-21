@@ -9,8 +9,6 @@
   --home-background-color: var(--color-white-smoke);
   --home-text-color: var(--color-black-eerie-high);
 
-  --phone-button-color: var(--color-white);
-
   --icon-color: var(--color-black);
 
   --popup-background-color: var(--color-white-smoke);
@@ -20,7 +18,8 @@
   --form-button-gradient-first: #dfd9d9;
   --form-button-gradient-second: var(--color-white);
   --form-button-shadow: #645d5d;
-  --form-button-icon: var(--color-green-kelly);
+  --form-button-icon-color: var(--color-white);
+  --form-button-icon-border: var(--color-green-kelly);
   --form-button-border: var(--color-white);
 
   --form-input-shadow: #b9b3b3;
@@ -48,8 +47,6 @@
 
     --background-back: #0a0a0a;
 
-    --phone-button-color: #1f1d1d;
-
     --icon-color: var(--color-white);
 
     --popup-background-color: var(--color-black-eerie-low);
@@ -59,6 +56,7 @@
     --form-button-gradient-first: #111111;
     --form-button-gradient-second: #3b3737;
     --form-button-shadow: #5a5656;
+    --form-button-icon-color: #1f1d1d;
     --form-button-border: var(--color-black);
 
     --form-input-shadow: #242020;

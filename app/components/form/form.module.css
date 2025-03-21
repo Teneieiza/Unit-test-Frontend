@@ -96,14 +96,14 @@
 }
 
 .iconbutton {
-  background-color: var(--phone-button-color);
-  border: 2px solid var(--form-button-icon);
+  background-color: var(--form-button-icon-color);
+  border: 2px solid var(--form-button-icon-border);
   border-radius: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   align-content: center;
-  transition: var(--phone-button-color) 0.3s ease, color 0.3s ease;
+  transition: var(--form-button-icon-color) 0.3s ease, color 0.3s ease;
 }
 
 .phonebuttonlayout {
