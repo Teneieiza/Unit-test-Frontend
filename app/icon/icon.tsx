@@ -13,13 +13,15 @@ export const ArrowIcon: React.FC = () => (
   </svg>
 )
 
-export const ChevronRightIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
+export const ChevronRightIcon: React.FC<React.SVGProps<SVGSVGElement>> = (
+  props,
+) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     height="24px"
     viewBox="0 0 24 24"
     width="24px"
-    fill={props.fill || "var(--icon-color)"}
+    fill={props.fill || 'var(--icon-color)'}
     {...props}
   >
     <path d="M0 0h24v24H0z" fill="none" />
@@ -53,13 +55,14 @@ export const BackSpace: React.FC = () => (
   </svg>
 )
 
-export const FillCiecle: React.FC = () => (
+export const FillCiecle: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     height="24px"
     viewBox="0 0 24 24"
     width="24px"
-    fill="var(--circle-background-pin)"
+    fill={props.fill || 'var(--circle-background-pin)'}
+    {...props}
   >
     <path d="M24 24H0V0h24v24z" fill="none" />
     <circle cx="12" cy="12" r="8" />
