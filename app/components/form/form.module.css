@@ -30,7 +30,7 @@
   flex-grow: 0;
 }
 
-.uppercontent{
+.uppercontent {
   display: flex;
   flex-direction: column;
   gap: 3px;
@@ -40,7 +40,7 @@
   font-size: 12px;
 }
 
-.bottomcontent{
+.bottomcontent {
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -52,17 +52,22 @@
   align-items: center;
 }
 
+.bottomcontent div > button {
+  cursor: pointer;
+}
+
 .bottomcontent span {
   font-weight: bold;
   text-decoration: underline;
-  text-underline-offset: 2;
+  text-underline-offset: 1px;
+  cursor: pointer;
 }
 
-.paragraphcontent{
+.paragraphcontent {
   padding: 0px 20px;
 }
 
-.content form > div > div{
+.content form > div > div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,7 +76,11 @@
 .content form > div > div > button {
   padding: 5px 0px;
   border: 3px solid var(--text-button);
-  background-image: linear-gradient(to bottom right, var(--button-gradient-first), var(--button-gradient-second));
+  background-image: linear-gradient(
+    to bottom right,
+    var(--button-gradient-first),
+    var(--button-gradient-second)
+  );
   border-radius: 30px;
   box-shadow: 3px 3px 10px var(--button-boxshadow);
   width: 90vw;
@@ -81,7 +90,6 @@
   background-color: var(--background-button-phone);
   border: 2px solid #54eb4f;
   border-radius: 100%;
-  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,7 +97,7 @@
   transition: var(--background-button-phone) 0.3s ease, color 0.3s ease;
 }
 
-.phonebuttonlayout{
+.phonebuttonlayout {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -99,4 +107,9 @@
 .phonebuttonlayout p {
   font-size: 14px;
   font-weight: bold;
+}
+
+.error {
+  color: red;
+  padding-top: 5px;
 }

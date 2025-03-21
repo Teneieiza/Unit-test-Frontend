@@ -1,38 +1,85 @@
-"use client"
+'use client'
 
-import { ChevronRightIcon } from "../../icon/icon";
-import styles from "./form.module.css";
+import { useState } from 'react'
+import { ChevronRightIcon } from '../../icon/icon'
+import styles from './form.module.css'
 
-interface FormProps{
-  formSubmit: (event: React.FormEvent) => void;
+interface FormProps {
+  formSubmit: (phoneNumber: string) => void
 }
 
-export default function Form( { formSubmit }: FormProps) {
+export default function Form({ formSubmit }: FormProps) {
+  const [phoneNumber, setPhoneNumber] = useState('')
+  const [error, setError] = useState('')
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value
+
+    if (/^\d*$/.test(value)) {
+      setPhoneNumber(value)
+      setError('')
+    } else if (!/^\d*$/.test(value)) {
+      setError('*กรุณากรอกเฉพาะตัวเลข')
+    }
+  }
+
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault()
+
+    if (!phoneNumber) {
+      setError('*กรุณากรอกหมายเลขโทรศัพท์')
+      return
+    }
+    if (phoneNumber.length !== 10) {
+      setError('*หมายเลขโทรศัพท์ต้องมี 10 หลัก')
+      return
+    }
+    if (phoneNumber !== '0943135555') {
+      setError('*หมายเลขโทรศัพท์ไม่ถูกต้อง')
+      return
+    }
+
+    setError('')
+    formSubmit(phoneNumber)
+  }
+
   return (
-  <div className={styles.content}>
-    <form onSubmit={formSubmit}>
-      <div className={styles.uppercontent}>
-        <legend>
-          <p>เบอร์โทรศัพท์</p>
-        </legend>
-        <input type="number" placeholder="กรุณากรอกหมายเลขโทรศัพท์" />
-      </div>
-      <div className={styles.bottomcontent}>
-        <div className={styles.paragraphcontent}>
-          <p>โดยกดปุ่ม "ตกลง" เพื่อยอมรับ <span>ข้อกำหนดและเงื่อนไขรวมทั้ง รับทราบนโยบายคุ้มครองข้อมูลส่วนบุคคล</span></p>
+    <div className={styles.content}>
+      <form onSubmit={handleSubmit}>
+        <div className={styles.uppercontent}>
+          <legend>
+            <p>เบอร์โทรศัพท์</p>
+          </legend>
+          <input
+            type="tel"
+            placeholder="กรุณากรอกหมายเลขโทรศัพท์"
+            maxLength={10}
+            value={phoneNumber}
+            onChange={handleChange}
+          />
+          {error && <p className={styles.error}>{error}</p>}
         </div>
-        <div>
-          <button>
-            <div className={styles.phonebuttonlayout}>
-              <div className={styles.iconbutton}>
-                <ChevronRightIcon/>
+        <div className={styles.bottomcontent}>
+          <div className={styles.paragraphcontent}>
+            <p>
+              โดยกดปุ่ม "ตกลง" เพื่อยอมรับ{' '}
+              <span>
+                ข้อกำหนดและเงื่อนไขรวมทั้ง รับทราบนโยบายคุ้มครองข้อมูลส่วนบุคคล
+              </span>
+            </p>
+          </div>
+          <div>
+            <button>
+              <div className={styles.phonebuttonlayout}>
+                <div className={styles.iconbutton}>
+                  <ChevronRightIcon />
+                </div>
+                <p>ตกลง</p>
               </div>
-              <p>ตกลง</p>
-            </div>
-          </button>
+            </button>
+          </div>
         </div>
-      </div>
-    </form>
-  </div>
-  );
+      </form>
+    </div>
+  )
 }
