@@ -1,8 +1,14 @@
-import Form from "../components/form"
-import { ChevronIcon } from "../icon/icon"
+"use client";
+
+import Form from "../components/form/form"
 import styles from "./phone.module.css"
 
 export default function PhonePage() {
+
+  const formSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
+    window.parent.postMessage({ type: "SET_IFRAME", url: "/pin" }, "*");
+  }
   return (
     <div className={styles.page}>
       <div className={styles.container}>
@@ -12,7 +18,7 @@ export default function PhonePage() {
           </p>
           <p>ด้วยหมายเลขโทรศัพท์มือถือ</p>
         </div>
-        <Form/>
+        <Form formSubmit={formSubmit} />
       </div>
     </div>
   )
