@@ -1,51 +1,83 @@
-import Image from "next/image"
-import { BackSpace, ChevronRightIcon, FillCiecle } from "../icon/icon"
-import styles from "./pin.module.css"
+'use client'
+
+import Image from 'next/image'
+import { BackSpace, ChevronRightIcon, FillCiecle } from '../icon/icon'
+import styles from './pin.module.css'
+import { useEffect, useState } from 'react'
 
 export default function PinPage() {
+  const pinLength = 6
+  const correctPin = '147369'
+  const [pin, setPin] = useState<string>('')
+  const [error, setError] = useState('')
+
+  useEffect(() => {
+    if (pin.length === pinLength) {
+      if (pin === correctPin) {
+        window.parent.postMessage({ type: 'SET_IFRAME', url: '/sort' }, '*')
+      } else {
+        setError('*PIN ไม่ถูกต้อง ลองใหม่อีกครั้ง!')
+        setPin('')
+      }
+    }
+  }, [pin])
+
+  const handleNumberClick = (num: number) => {
+    if (pin.length < pinLength) {
+      setPin(pin + num)
+    }
+  }
+
+  const handleBackspace = () => {
+    setPin(pin.slice(0, -1))
+  }
+
   return (
     <div className={styles.page}>
       <div className={styles.container}>
         <div className={styles.header}>
           <div>
             <Image
-            src="/spinning-spining-cat.gif"
-            alt="UiaCat"
-            width={60}
-            height={60}
-            unoptimized
-            className={styles.imagecontent}
+              src="/spinning-spining-cat.gif"
+              alt="UiaCat"
+              width={60}
+              height={60}
+              unoptimized
+              className={styles.imagecontent}
             />
           </div>
           <div className={styles.pincontent}>
-            <p>ใส่ PIN เพื่อดำเนินการต่อ</p>
+            <p className={styles.pintext}>ใส่ PIN เพื่อดำเนินการต่อ</p>
             <div className={styles.pin}>
-              <FillCiecle/>
-              <FillCiecle/>
-              <FillCiecle/>
-              <FillCiecle/>
-              <FillCiecle/>
-              <FillCiecle/>
+              {Array.from({ length: pinLength }).map((_, index) => (
+                <FillCiecle
+                  key={index}
+                  fill={
+                    index < pin.length
+                      ? 'var(--circle-background-pined)'
+                      : 'var(--circle-background-pin)'
+                  }
+                />
+              ))}
             </div>
+            {error && <p className={styles.error}>{error}</p>}
           </div>
           <div className={styles.forgotpass}>
-            <a>ลืมรหัสผ่าน <ChevronRightIcon fill="var(--forgot-pass-content)"/></a>
+            <p>
+              ลืมรหัสผ่าน <ChevronRightIcon fill="var(--forgot-pass-content)" />
+            </p>
           </div>
         </div>
         <div className={styles.footer}>
-          <button>1</button>
-          <button>2</button>
-          <button>3</button>
-          <button>4</button>
-          <button>5</button>
-          <button>6</button>
-          <button>7</button>
-          <button>8</button>
-          <button>9</button>
+          {[...Array(9)].map((_, i) => (
+            <button key={i + 1} onClick={() => handleNumberClick(i + 1)}>
+              {i + 1}
+            </button>
+          ))}
           <div> </div>
-          <button>0</button>
-          <button>
-            <BackSpace/>
+          <button onClick={() => handleNumberClick(0)}>0</button>
+          <button onClick={handleBackspace}>
+            <BackSpace />
           </button>
         </div>
       </div>
