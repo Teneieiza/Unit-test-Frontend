@@ -54,8 +54,8 @@ export default function PinPage() {
                   key={index}
                   fill={
                     index < pin.length
-                      ? 'var(--circle-background-pined)'
-                      : 'var(--circle-background-pin)'
+                      ? 'var(--pin-circle-color-pined)'
+                      : 'var(--pin-circle-color-pin)'
                   }
                 />
               ))}
@@ -64,7 +64,7 @@ export default function PinPage() {
           </div>
           <div className={styles.forgotpass}>
             <p>
-              ลืมรหัสผ่าน <ChevronRightIcon fill="var(--forgot-pass-content)" />
+              ลืมรหัสผ่าน <ChevronRightIcon fill="var(--pin-forgot-color)" />
             </p>
           </div>
         </div>

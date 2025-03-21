@@ -25,19 +25,6 @@
   color: black;
 }
 
-.buttonpage {
-  padding: 10px 25px;
-  background-color: var(--background-button);
-  color: var(--text-button);
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.buttonpage:hover {
-  background-color: var(--background-button-hover);
-}
-
 .pushable {
   position: relative;
   border: none;

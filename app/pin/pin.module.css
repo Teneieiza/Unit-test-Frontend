@@ -1,7 +1,7 @@
 .page {
   width: 100vw;
   height: 100%;
-  background-color: var(--background-pin-header);
+  background-color: var(--pin-background-head-color);
 }
 
 .container {
@@ -15,7 +15,7 @@
   border: 0px solid transparent;
   border-radius: 10px;
   padding: 1px;
-  box-shadow: 3px 3px 10px var(--image-shadow);
+  box-shadow: 3px 3px 10px var(--pin-image-shadow);
 }
 
 .header {
@@ -32,7 +32,7 @@
 .footer {
   height: 50%;
   width: 100%;
-  background-color: var(--background-pin-footer);
+  background-color: var(--pin-background-foot-color);
   border: 2px solid transparent;
   border-radius: 8px;
   display: grid;
@@ -45,10 +45,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--text-pin);
+  color: var(--pin-button-text);
   font-size: 16px;
   font-weight: bold;
-  background-color: var(--background-pin-footer);
+  background-color: var(--pin-background-foot-color);
   border: 0px solid transparent;
   border-radius: 8px;
   width: 100%;
@@ -58,7 +58,7 @@
 }
 
 .footer button:hover {
-  background-color: var(--background-pin);
+  background-color: var(--pin-button-hover);
 }
 
 .pincontent {
@@ -85,7 +85,7 @@
   align-items: center;
   align-content: center;
   font-size: 12px;
-  color: var(--forgot-pass-content);
+  color: var(--pin-forgot-color);
   cursor: pointer;
 }
 

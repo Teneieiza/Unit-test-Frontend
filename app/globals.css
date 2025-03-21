@@ -1,62 +1,75 @@
 :root {
-  --background: #f5f5f5;
-  --foreground: #171717;
+  --color-white:#ffffff;
+  --color-white-smoke: #f5f5f5;
+  --color-black: #000000;
+  --color-black-eerie-high: #171717;
+  --color-black-eerie-low: #202020;
+  --color-green-kelly: #27b922;
 
-  --background-button: #171717;
-  --background-button-hover: #333333;
-  --text-button: #ffffff;
+  --home-background-color: var(--color-white-smoke);
+  --home-text-color: var(--color-black-eerie-high);
 
-  --background-button-phone: #ffffff;
-  --icon-color: #000000;
+  --phone-button-color: var(--color-white);
 
-  --button-gradient-first: #dfd9d9;
-  --button-gradient-second: #ffffff;
-  --button-boxshadow: #645d5d;
+  --icon-color: var(--color-black);
 
-  --input-shadow: #b9b3b3;
-  --input-bg: #ffffff;
-  --input-text: #887f7f;
+  --popup-background-color: var(--color-white-smoke);
+  --popup-text-color: var(--color-black-eerie-high);
+  --popup-button-color: var(--color-white);
 
-  --background-pin-header: #f5f5f5f5;
-  --background-pin-footer: #ffffff;
+  --form-button-gradient-first: #dfd9d9;
+  --form-button-gradient-second: var(--color-white);
+  --form-button-shadow: #645d5d;
+  --form-button-icon: var(--color-green-kelly);
+  --form-button-border: var(--color-white);
 
-  --image-shadow: #cfc8c8;
+  --form-input-shadow: #b9b3b3;
+  --form-input-color: var(--color-white);
+  --form-input-text: #887f7f;
 
-  --background-pin: #e7e6e6;
-  --text-pin: #27b922;
+  --pin-background-head-color: var(--color-white-smoke);
+  --pin-background-foot-color: var(--color-white);
 
-  --circle-background-pin: #d7d7e1;
-  --circle-background-pined: #ff732d;
+  --pin-image-shadow: #cfc8c8;
 
-  --forgot-pass-content: #bebec4;
+  --pin-button-hover: #e7e6e6;
+  --pin-button-text: var(--color-green-kelly);
+
+  --pin-circle-color-pin: #d7d7e1;
+  --pin-circle-color-pined: #ff732d;
+
+  --pin-forgot-color: #bebec4;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #202020;
-    --foreground: #ededed;
+    --home-background-color: var(--color-black-eerie-low);
+    --home-text-color: #ededed;
+
     --background-back: #0a0a0a;
 
-    --background-button: #dfd7d7;
-    --background-button-hover: #e0e0e0;
-    --text-button: #000000;
+    --phone-button-color: #1f1d1d;
 
-    --background-button-phone: #1f1d1d;
-    --icon-color: #ffffff;
+    --icon-color: var(--color-white);
 
-    --button-gradient-first: #111111;
-    --button-gradient-second: #3b3737;
-    --button-boxshadow: #5a5656;
+    --popup-background-color: var(--color-black-eerie-low);
+    --popup-text-color: #ededed;
+    --popup-button-color: var(--color-black);
 
-    --input-shadow: #242020;
-    --input-bg: #353131;
-    --input-text: #998b8b;
+    --form-button-gradient-first: #111111;
+    --form-button-gradient-second: #3b3737;
+    --form-button-shadow: #5a5656;
+    --form-button-border: var(--color-black);
 
-    --background-pin-header: #202020;
-    --background-pin-footer: #3b3737;
+    --form-input-shadow: #242020;
+    --form-input-color: #353131;
+    --form-input-text: #998b8b;
 
-    --image-shadow: #666060;
-    --background-pin: #2e2c2c;
+    --pin-background-head-color: var(--color-black-eerie-low);
+    --pin-background-foot-color: #3b3737;
+
+    --pin-image-shadow: #666060;
+    --pin-button-hover: #2e2c2c;
   }
 }
 
@@ -80,8 +93,8 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: var(--home-text-color);
+  background: var(--home-background-color);
   display: flex;
   justify-content: center;
   width: 100%;
@@ -89,7 +102,6 @@ body {
 }
 
 main {
-  background-color: var(--background);
   max-width: 48rem;
   height: 100%;
 }

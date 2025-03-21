@@ -12,8 +12,8 @@
 
 .popup {
   display: flex;
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--popup-background-color);
+  color: var(--popup-text-color);
   border-radius: 8px;
   max-width: 48rem;
   border: 2px solid transparent;
@@ -34,7 +34,7 @@
   display: flex;
   justify-content: center;
   padding: 1px;
-  background-color: var(--background-button-phone);
+  background-color: var(--popup-button-color);
   border: 4px solid transparent;
   border-radius: 100%;
   position: absolute;
@@ -42,7 +42,7 @@
   left: 20px;
   cursor: pointer;
   align-items: center;
-  transition: var(--background-button-phone) 0.3s ease, color 0.3s ease;
+  transition: var(--popup-button-color) 0.3s ease, color 0.3s ease;
 }
 
 .closeButton:hover {
