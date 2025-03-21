@@ -1,0 +1,85 @@
+.page{
+  width: 100vw;
+  height: 100%;
+  background-color: var(--background-pin-header);
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.imagecontent{
+  border: 0px solid transparent;
+  border-radius: 10px;
+  padding: 1px;
+  box-shadow: 3px 3px 10px var(--image-shadow);
+}
+
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  padding-top: 80px;
+  height: 50%;
+  width: 100%;
+}
+
+.footer{
+  height: 50%;
+  width: 100%;
+  background-color: var(--background-pin-footer);
+  border: 2px solid transparent;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding-bottom: 10px;
+  align-items: center;
+}
+
+.footer button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-pin);
+  font-size: 16px;
+  font-weight: bold;
+  background-color: var(--background-pin-footer);
+  border: 0px solid transparent;
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transition: all 300ms ease-in-out ;
+}
+
+.footer button:hover {
+  background-color: var(--background-pin);
+}
+
+.pincontent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+}
+
+.pin{
+  display: flex;
+  gap: 6px;
+}
+
+.forgotpass a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-size: 12px;
+  color: var(--forgot-pass-content);
+}
