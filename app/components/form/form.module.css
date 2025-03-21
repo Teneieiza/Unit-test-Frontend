@@ -54,6 +54,15 @@
 
 .bottomcontent div > button {
   cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+
+.bottomcontent div > button:hover {
+  transform: translateY(-2px);
+}
+
+.bottomcontent div > button:active {
+  transform: translateY(0);
 }
 
 .bottomcontent span {
