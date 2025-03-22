@@ -38,6 +38,11 @@
   --pin-circle-color-pined: #ff732d;
 
   --pin-forgot-color: #bebec4;
+
+  --sort-background-color: var(--color-white-smoke);
+  --sort-background-btm-color: var(--color-white);
+
+  --sort-section-btm-shadow: #cfc8c8;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -68,6 +73,11 @@
 
     --pin-image-shadow: #666060;
     --pin-button-hover: #2e2c2c;
+
+    --sort-background-color: var(--color-black-eerie-low);
+    --sort-background-btm-color: #3b3737;
+
+    --sort-section-btm-shadow: #666060;
   }
 }
 
