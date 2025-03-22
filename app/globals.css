@@ -43,6 +43,11 @@
   --sort-background-btm-color: var(--color-white);
 
   --sort-section-btm-shadow: #cfc8c8;
+
+  --sort-button-color: var(--color-black);
+  --sort-button-border: var(--color-white);
+  --sort-button-shadow: #645d5d;
+  --sort-button-text: var(--color-white);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -78,6 +83,11 @@
     --sort-background-btm-color: #3b3737;
 
     --sort-section-btm-shadow: #666060;
+
+    --sort-button-color: var(--color-white);
+    --sort-button-border: var(--color-black);
+    --sort-button-shadow: #5a5656;
+    --sort-button-text: var(--color-black);
   }
 }
 
