@@ -2,7 +2,7 @@
 
 import styles from './popup.module.css'
 import { useEffect } from 'react'
-import { ChevronLeftIcon, ArrowIcon } from '../../icon/icon'
+import { ChevronLeftIcon, ArrowIcon } from '@/app/components/icons'
 
 interface PopupProps {
   onClose: () => void

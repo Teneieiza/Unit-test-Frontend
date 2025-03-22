@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { BackSpace, ChevronRightIcon, FillCiecle } from '../icon/icon'
+import { BackSpace, ChevronRightIcon, FillCiecle } from '@/app/components/icons'
 import styles from './pin.module.css'
 import { useEffect, useState } from 'react'
 import { members } from '../data/member'

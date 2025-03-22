@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { ChevronRightIcon } from '../../icon/icon'
+import { ChevronRightIcon } from '@/app/components/icons'
 import styles from './form.module.css'
 import { members } from '@/app/data/member'
 
