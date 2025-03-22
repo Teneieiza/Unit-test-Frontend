@@ -61,6 +61,11 @@
   background-color: var(--pin-button-hover);
 }
 
+.lockbutton{
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+
 .pincontent {
   display: flex;
   flex-direction: column;
