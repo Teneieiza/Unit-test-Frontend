@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { ChevronRightIcon } from '../../icon/icon'
 import styles from './form.module.css'
+import { members } from '@/app/data/member'
 
 interface FormProps {
   formSubmit: (phoneNumber: string) => void
@@ -34,12 +35,16 @@ export default function Form({ formSubmit }: FormProps) {
       setError('*หมายเลขโทรศัพท์ต้องมี 10 หลัก')
       return
     }
-    if (phoneNumber !== '0943135555') {
+
+    const member = members.find((data) => data.phone === phoneNumber)
+
+    if (!member) {
       setError('*หมายเลขโทรศัพท์ไม่ถูกต้อง')
       return
     }
 
     setError('')
+    sessionStorage.setItem('phoneNumber', phoneNumber);
     formSubmit(phoneNumber)
   }
 
